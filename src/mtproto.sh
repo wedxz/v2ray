@@ -6,6 +6,8 @@ _view_mtproto_info() {
 	fi
 }
 _mtproto_info() {
+	_load status.sh
+	_get_status
 	[[ -z $ip ]] && get_ip
 	echo
 	echo "---------- Telegram MTProto 配置信息 -------------"

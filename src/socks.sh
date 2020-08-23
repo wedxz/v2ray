@@ -6,6 +6,8 @@ _view_socks_info() {
 	fi
 }
 _socks_info() {
+	_load status.sh
+	_get_status
 	[[ -z $ip ]] && get_ip
 	echo
 	echo "---------- Socks 配置信息 -------------"
